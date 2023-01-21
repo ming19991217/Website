@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 引入外部樣式 -->
+    <link rel="stylesheet" href="ExternalStyleSheet.css">
+
+    <!-- 內部樣式 單個css具有統一性 但在多個頁面容易混亂 -->
+    <style>
+        /* 元素選擇器 */
+        h3 {
+            color: aquamarine;
+            font-size: 30;
+        }
+
+        span {
+            color: blue;
+        }
+
+        /* 全局選擇器 所有可匹配元素都會生效 */
+        * {
+            font-size: 15;
+            color: red;
+        }
+
+
+        /* 類選擇器 無視標籤 針對制定語句 可重複使用*/
+        .content {
+            color: gold;
+        }
+
+        .size {
+            font-size: 10px;
+        }
+
+        /* id選擇器 id是唯一的並不能以數字開頭 針對某個特定的標籤使用 只能使用一次！ */
+        #text {
+            color: fuchsia;
+        }
+
+        /* 合併選擇器 */
+        p,
+        h3 {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>標題</h3>
+
+    <!-- 內聯樣式 缺乏整體性 不利於維護 -->
+    <p style="color: blue;font-size: 10;">文字</p>
+
+    <p>tset test test</p>
+    <p>tset <span>test</span> test</p>
+
+    <!--類選擇器 無視標籤 針對制定語句 -->
+    <p class="content size">類選擇器</p>
+
+    <!-- id選擇器 針對某個特定的標籤使用 只能使用一次-->
+    <p id="text">id選擇器</p>
+
+    <p>選擇器優先級</p>
+    <ul>
+        <li>元素選擇器：1</li>
+        <li>class選擇器：10</li>
+        <li>id選擇器：100</li>
+        <li>內聯樣式：1000</li>
+    </ul>
+
+</body>
+
+</html>

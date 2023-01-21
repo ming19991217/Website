@@ -73,8 +73,6 @@
     <p>table 表格 tr 行 td 單元格</p>
     <p>水平合并 保留左邊刪除右邊 colspan</p>
     <p>垂直合并 保留上邊刪除 rowspan</p>
-
-
     <p>talbe>tr*3>td{單元格} 快速生成列表</p>
     <table border="1" width="400" height="400">
         <tr>
@@ -87,10 +85,43 @@
             <td>0</td>
             <td>0</td>
         </tr>
-
     </table>
 
+    <p>表單 action服務器地址 name表單名稱</p>
+    <p>method中get post區別 get提交少量數據可看見 post提交大量不可見 </p>
+    <form action="url" method="get|post" name="myform">
+        用戶名： <input type="text"><br>
+        密碼： <input type="password" name="pwd">
+        <input type="submit" value="登入">
+    </form>
 
+
+    <h4>塊元素 內聯元素</h4>
+    <p>塊元素：</p>
+    <ul>
+        <li>塊元素會在頁面中獨佔一行</li>
+        <li>可以設置width height屬性</li>
+        <li>一般塊級元素可以包含行內元素和其他塊級元素</li>
+        <li>div form h1~h6 hr p table ul</li>
+    </ul>
+
+    <p>內聯元素：</p>
+    <ul title="內聯元素">
+        <li>行內元素不會獨佔頁面中的一行，只佔自身大小</li>
+        <li>行內元素設置width height屬性無效</li>
+        <li>一般內聯元素包含內聯元素不包含塊級元素</li>
+        <li>a b em i span strong</li>
+    </ul>
+    <p>行內塊級元素(不換行 能識別寬高):button img input</p>
+
+    <p>容器 div</p>
+    <header></header>
+    <nav></nav>
+    <article>
+        <section></section>
+    </article>
+    <aside></aside>
+    <footer></footer>
 
 </body>
 
