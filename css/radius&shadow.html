@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 56px;
+            height: 56px;
+            background-color: orange;
+
+            /* 左右空間平均分配 = 居中 */
+            margin: 0 auto;
+        }
+
+        /* 圓角 */
+        .radius1 {
+            /* 圓角  100%=圓形*/
+            border-radius: 20px;
+        }
+
+        .radius2 {
+            /* 100%=圓形*/
+            border-radius: 100%;
+        }
+
+        .radius3 {
+            /* 圓角  1左上角和右下角 2右下角和左下角*/
+            border-radius: 20px 0px;
+        }
+
+
+        /* shadow */
+        .shadow1 {
+            /* 陰影 水平 垂直 模糊距離 顔色 */
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="radius1 shadow1"></div>
+    <div class="radius2"></div>
+    <div class="radius3"></div>
+</body>
+
+</html>

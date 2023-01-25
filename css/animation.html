@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .anim {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+
+            /* 動畫 1動畫名 2 持續時間 3速率 4延遲 5循環次數 6動畫方向  */
+            animation: myAnim 3s linear 0s infinite;
+        }
+
+        /* 繼承hover后 鼠標滑上去會改變 */
+        .anim:hover {
+            /* background-color: coral; */
+            animation-play-state: paused;
+        }
+
+        @keyframes myAnim {
+            0% {
+                width: 200px;
+                background-color: red;
+            }
+
+            50% {
+
+                width: 400px;
+                background-color: green;
+            }
+
+            100% {
+
+                width: 200px;
+                background-color: red;
+            }
+        }
+
+        /* 呼吸效果 */
+        .box {
+            width: 500px;
+            height: 400px;
+            margin: 40px auto;
+            background-color: aqua;
+            border-radius: 10px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, .3);
+            animation: breathe 2.7s ease-in-out infinite alternate;
+        }
+
+        @keyframes breathe {
+            0% {
+                opacity: .2;
+                box-shadow: 0 1px 2px rgba(255, 255, 255, 0.1);
+            }
+
+            50% {
+                opacity: .5;
+                box-shadow: 0 1px 2px rgba(18, 190, 84, 0.76);
+            }
+
+
+            100% {
+                opacity: 1;
+                box-shadow: 0 1px 30px rgba(59, 255, 255, 1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="anim"></div>
+    <div class="box"></div>
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>Hello</div>
+    <div class="text">Hello</div>
+    <form name="login" action=""></form>
+    <div id="root">Hello</div>
+    <script src="./Hello.js"></script>
+
+    <script></script>
+
+    <script>
+        var i = 10;
+        var s = "hi";
+        console.log(i);
+        // alert("輸出") //彈窗
+        document.write("輸出") //寫在網頁上
+
+        //合成數據 符合數據類型 object
+        var obj = {
+            name: "hi",
+            age: 20,
+            learn: true
+        }
+        // alert(obj.age);
+
+        // 判斷數據類型 判斷基本數據類型使用
+        console.log(typeof i);
+        console.log(typeof s);
+        console.log(typeof obj); //可以返回obj但是下面的數組也是返回obj
+        console.log(typeof []);
+        console.log(typeof null); //返回obj
+        console.log(typeof undefined);//undefined
+
+        var num1 = 10
+        var num2 = "10"
+        console.log(num1 == num2)//true;
+        //嚴格比較符 數值本身是否相同 類型本身是否相同
+        console.log(num1 === num2)//false;
+
+        //數組 stack的結合躰
+        var arr = [1, 2, 3, 4];
+        arr.push("hi");
+        arr.forEach(element => {
+            console.log(element);
+        });
+        console.log(arr.pop());//刪除最後一個數組
+        console.log(arr.shift());//刪除第一個數組
+        console.log(arr.unshift(1, 1, 1))//在頭部添加 並返回新數組長度
+        console.log(arr);
+
+        console.log(arr.join(' | '));//將數組遍歷返回一個字符串 1 | 1 | 1 | 2 | 3 | 4
+        arr2 = ["ha", "ha2", "ha3"]
+        //合并多個數組
+        console.log(arr.concat(arr2));
+
+        //function
+        console.log(add(1, 3));
+        function add(x, y) {
+            return (x + y);
+        }
+        function debug(text) {
+            console.log(text);
+        }
+
+        // obj function
+        var functionObj = {
+            name: "fasjdkafdjskl",
+            getName: function () {
+                console.log("hi");
+            }
+        }
+        functionObj.getName();
+
+        //獲得隨機數
+        function getRandom(min, max) {
+            //最大值-最小值 *隨機數 = 0~最小值之間的隨機數 +最小值=10~20
+            var result = Math.random() * (max - min) + min;
+            result = Math.floor(result);
+            console.log(result);
+        }
+        getRandom(0, 20);
+
+        // DOM js操作網頁的接口
+        console.log(document);
+        if (document.nodeType === 9) {
+            debug("頂層節點");
+        }
+
+        // getElementsByTagName
+        var paras = document.getElementsByTagName("div")[0];
+        debug(paras.innerHTML = "Hellow World");
+
+        var elements = document.getElementsByClassName("text");
+        debug(elements);
+
+        //使用率低
+        var login = document.getElementsByName("login")
+        debug(login);
+
+        var root = document.getElementById("root")
+        debug(root);
+
+
+
+
+
+    </script>
+</body>
+
+</html>

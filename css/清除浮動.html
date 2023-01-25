@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            /* height: 500px; */
+            width: 500px;
+            background-color: aqua;
+
+            /* 清除浮動 */
+            /* 如果父級有塌陷，并且同級元素也受到了影響 */
+            /* 可以使用overflow，父級不能設置高度 */
+            overflow: hidden;
+            clear: both;
+        }
+
+
+        /* 偽對象方式 */
+        /* 和overflow一樣，處理父級塌陷  */
+        /* 為父類標簽增加偽類after，設置空内容 */
+        .container2 {
+            width: 500px;
+            background-color: bisque;
+        }
+
+        .container2::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+
+
+        .box {
+            height: 100px;
+            width: 100px;
+            background-color: aquamarine;
+            margin: 5px;
+            float: left;
+        }
+
+        .text {
+            width: 100px;
+            height: 100px;
+            background-color: crimson;
+
+            /* 清除float浮動 */
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="text"></div>
+    </div>
+
+    <div class="container2">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="text"></div>
+    </div>
+</body>
+
+</html>

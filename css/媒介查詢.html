@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- meta標簽 使用設備的寬度作爲視圖寬度並禁止初始的縮放 在head標簽加入這個meta標簽 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            width: 300px;
+            height: 300px;
+        }
+
+        @media screen and (max-width:768px) {
+
+            /* 手機情況下 */
+            .box {
+                background-color: red;
+            }
+
+            .p1 {
+                display: none;
+            }
+
+            .p2 {
+                display: none;
+            }
+        }
+
+        @media screen and (min-width:768px) and (max-width:996px) {
+
+            /* 大於768 但小於996 */
+            .box {
+                background-color: greenyellow;
+            }
+
+            .p1 {
+                display: block;
+            }
+
+            .p2 {
+                display: none;
+            }
+        }
+
+        @media screen and (min-width:996px) {
+
+            /* 大於996 */
+            .box {
+                background-color: blueviolet;
+            }
+
+            .p1 {
+                display: block;
+            }
+
+            .p2 {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <p class="p1">jsdifjsdi</p>
+    <p class="p2">sjfakldfjkls</p>
+</body>
+
+</html>
