@@ -11,6 +11,7 @@
 <body>
     <div>Hello</div>
     <div class="text">Hello</div>
+    <div class="text">Hello</div>
     <form name="login" action=""></form>
     <div id="root">Hello</div>
     <script src="./Hello.js"></script>
@@ -89,12 +90,14 @@
         }
         getRandom(0, 20);
 
+
+
+
         // DOM js操作網頁的接口
         console.log(document);
         if (document.nodeType === 9) {
             debug("頂層節點");
         }
-
         // getElementsByTagName
         var paras = document.getElementsByTagName("div")[0];
         debug(paras.innerHTML = "Hellow World");
@@ -108,6 +111,24 @@
 
         var root = document.getElementById("root")
         debug(root);
+
+        var text = document.querySelector(".text");
+        debug(text);
+
+        var texts = document.querySelectorAll(".text");
+        debug(texts);
+
+        //添加元素
+        var text = document.createElement("p");
+        var content = document.createTextNode("我是文本");
+        var id = document.createAttribute("id");
+        id.value = "root";
+        //appendChild 將内容或子元素放入容器中 
+        text.appendChild(content);
+        //設定attribute
+        text.setAttributeNode(id);
+        var container = document.getElementById("root")
+        container.appendChild(text);
 
 
 
